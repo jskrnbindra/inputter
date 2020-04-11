@@ -1,8 +1,9 @@
 # inputter
-Answer to my code design interview question when I was a fresher.
+Answer to a simple code design interview question I faced when I was a fresher.
+Saving it here because I like how I did it back then.
 
 ## Question
-We need to accept input from the user (say through command line) and output the following JSON.
+We need to generate the following JSON by accepting input from the user for field values.
 
 ```javascript
 {
@@ -40,11 +41,16 @@ We need to accept input from the user (say through command line) and output the 
 | field          | Accepted values                     |
 |----------------|-------------------------------------|
 | query          | GROUPBY, STATIC, RAW, TOPK          |
-| AttributeType  | int, long, double, string           |
-| AttributeIndex | NONE, NORMAL                        |
+| attrType       | int, long, double, string           |
+| Index          | NONE, NORMAL                        |
 | Notification   | NOTIFICATION_ALL, NOTIFICATION_NONE |
 | SampleGran     | SECOND, MINUTE, HOUR                |
+| key-size       | 64 if attrType is 'string'          |
+| id             | a random id                         |
+| stream-name    | displayName + '_' + id              |
+| appId          | a random uuid                       |
 
+`attributes` can be of any number.
 
 ## Usage
 `python3 main.py`
