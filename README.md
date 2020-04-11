@@ -50,7 +50,7 @@ We need to generate the following JSON by accepting input from the user for fiel
 | stream-name    | displayName + '_' + id              |
 | appId          | a random uuid                       |
 
-`attributes` can be of any number.
+User can input as many `attributes` as she wants.
 
 ## Usage
 `python3 main.py`
